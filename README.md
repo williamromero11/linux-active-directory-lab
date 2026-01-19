@@ -3,8 +3,7 @@
 A complete Linux-based Active Directory environment implemented using Samba AD, Kerberos, and Ubuntu Server for identity and access management.
 
 ## 🎯 Project Overview
-A complete enterprise-level identity management system built on Linux using Samba 4 as an Active Directory domain controller. This project demonstrates setting up a Windows-compatible directory service in a Linux environment with Kerberos authentication, DNS, NTP, and file sharing services.
-
+This hands-on lab demonstrates the deployment and management of a Linux-based Active Directory environment in a virtualized, multi-server setup. Using Samba AD, Kerberos, DNS, and NTP, I configured a domain controller to simulate enterprise-level identity and access management. The project emphasized security best practices, including least-privilege access, automated administration via Bash and PowerShell scripts, and validation of directory services through structured testing. This lab reflects practical skills in system administration, security hardening, and infrastructure automation — core competencies for roles in cybersecurity, IT operations, and cloud administration.
 ## 📋 Architecture
 
 ```
