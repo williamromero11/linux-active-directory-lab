@@ -37,3 +37,5 @@ A complete enterprise-level identity management system built on Linux using Samb
 - SSH - Secure remote administration
 
 ## 📸 Project Evidence
+
+https://github.com/williamromero11/linux-active-directory-lab/blob/main/screenshots/1.pdf
