@@ -62,3 +62,58 @@ A complete enterprise-level identity management system built on Linux using Samb
 ![SSH to Domain Controller](Screenshots/7-1.png)
 *Comprehensive verification of fully functional Active Directory environment - All services operational, clients joined, authentication working*
 
+## ⚙️ Implementation Commands
+
+### 🖥️ Domain Controller Configuration
+*Installation and provisioning of Samba 4 Active Directory Domain Services*
+
+```bash
+# Install required packages
+sudo apt install -y samba-ad-dc krb5-config krb5-user winbind
+
+# Provision Active Directory domain
+sudo samba-tool domain provision --realm=SVN.COM --domain=SVN --server-role=dc
+
+# Configure and start services
+sudo systemctl start samba-ad-dc
+sudo systemctl enable samba-ad-dc
+```
+## 🚹 Client Server Domain Join
+```bash
+# Install domain join packages
+sudo apt install -y sssd-ad realmd adcli
+
+# Discover and join domain
+realm discover svn.com
+sudo realm join -v SVN.COM
+
+# Configure authentication services
+sudo systemctl restart sssd
+sudo pam-auth-update --enable mkhomedir
+```
+## ✅ Service Verification
+```bash
+host -t A svn.com
+host -t SRV _kerberos._udp.svn.com
+kinit administrator@SVN.COM
+klist
+smbclient -L svn.com -N
+realm list
+sudo samba-tool computer list
+```
+🎓 Skills Demonstrated
+
+-Active Directory Services - Linux-based AD DC deployment and management
+
+-Identity & Access Management - Kerberos authentication, SSSD integration
+
+-Network Services - DNS, NTP, and service discovery configuration
+
+-System Administration - Multi-server virtualization and management
+
+-Security Implementation - Least privilege, secure remote access (SSH)
+
+-Enterprise Operations - Group Policy preparation, centralized authentication
+
+-Troubleshooting - Service validation and connectivity testing
+
