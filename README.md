@@ -38,4 +38,4 @@ A complete enterprise-level identity management system built on Linux using Samb
 
 ## 📸 Project Evidence
 
-https://github.com/williamromero11/linux-active-directory-lab/blob/main/screenshots/1.pdf
+[PDF 1](screenshots/1.pdf) – Samba AD DC Setup  
